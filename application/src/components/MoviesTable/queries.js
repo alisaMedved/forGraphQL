@@ -5,6 +5,9 @@ export const moviesQuery = gql`
     movies {
     id
     name
-    genre
+    genre,
+    director{
+    name
+    }
     }
     }`;
