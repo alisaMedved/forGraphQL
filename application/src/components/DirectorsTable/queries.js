@@ -1,14 +1,16 @@
-import {gql} from "apollo-boost"
+import { gql } from 'apollo-boost';
+
 
 export const directorsQuery = gql`
-    query directorsQuery {
-    directors {
-    id
-    name
-    age
-    movies {
-    name
-    id
+  query directorsQuery($name: String) {
+    directors(name: $name) {
+      id
+      name
+      age
+      movies {
+        name
+        id
+      }
     }
-    }
-    }`;
+  }
+`;
